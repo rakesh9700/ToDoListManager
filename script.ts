@@ -77,7 +77,7 @@ let addTask = (task: string, assignee: string, date: string) => {
     checkbox.type = "checkbox";
     newCheckbox.appendChild(checkbox);
 
-    checkbox.addEventListener("click", (event: PointerEvent) => deleteTask(checkbox,newTask));
+    checkbox.addEventListener("click", (event) => deleteTask(checkbox,newTask));
 
     clearFormFields();
 }
@@ -101,7 +101,7 @@ let isValidatedTrue = (task: string, assignee: string, date: string):boolean => 
     return false;
 }
 
-let extractAndValidate = (event: PointerEvent) => {
+let extractAndValidate = (event) => {
     event.preventDefault();
     let task: string = form.elements["task"].value;
     console.log(form.elements);
